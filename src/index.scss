@@ -58,7 +58,12 @@ $speed: 500ms;
         top: 50%;
         transform: translateY(-50%);
         right: 0px;
-        cursor: pointer
+        transition: filter 300ms;
+        cursor: pointer;
+
+       &:hover {
+           filter: brightness(1.2);
+       }
     }
     
     &__iconButton {
@@ -67,7 +72,6 @@ $speed: 500ms;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 2px;
         transition: filter 300ms;
         cursor: pointer;
 
@@ -87,7 +91,6 @@ $speed: 500ms;
     box-sizing: border-box;
     position: absolute;
     top: 73%;
-    min-width: 120px;
    
     overflow: hidden;
     display: flex;
