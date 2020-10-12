@@ -1,0 +1,139 @@
+$bg_color_3: #242526;
+$bg_color_1: white;
+$bg_color_2: #484a4d;
+$text_color: black;
+$text_color_1: #dadce1;
+
+
+$nav_size: 20px;
+$border: .1px solid #474a4d;
+$border_radius: 8px;
+$speed: 500ms; 
+
+.navbar {
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+       
+    }
+    
+    a {
+        color: $text_color;
+        text-decoration: none;
+    }
+
+    a:active,
+    a:hover {
+        color: $text_color;
+        text-decoration: none;
+    }
+
+    &__nav {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+.navItem {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex:1;
+    margin: 2px;
+  
+    .menuIcon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0px;
+        cursor: pointer
+    }
+    
+    &__iconButton {
+        flex: 1;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2px;
+        transition: filter 300ms;
+        cursor: pointer;
+
+       &:hover {
+           filter: brightness(1.2);
+       }
+
+       span {
+           margin-right: 10px;
+       }
+
+
+    }
+}
+
+.dropdownMenu {
+    box-sizing: border-box;
+    position: absolute;
+    top: 73%;
+    min-width: 120px;
+   
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow:0 0 6px -2px rgba(0, 0,0, 0.75);
+}
+
+.dropdownMenuItem {
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter $speed; 
+    padding: 0 10px;
+
+    .textCenter {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 70%;
+        border-bottom: 1px solid #ECECEC;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:hover {
+       filter: brightness(0.9)
+    }
+
+    &__iconRight {
+        margin-left: auto;
+    }
+}
+
